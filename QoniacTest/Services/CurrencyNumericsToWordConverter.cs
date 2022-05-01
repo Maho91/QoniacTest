@@ -9,16 +9,16 @@ using WebApi.Helpers;
 
 namespace QoniacExercise.Service
 {
-    public class MoneyNumericsToWordConverter : IMoneyNumericsToWordConverter
+    public class CurrencyNumericsToWordConverter : ICurrencyNumericsToWordConverter
     {
 
-        public string ConvertDollarsAndCentsNumberToText(string number)
+        public string Convert(string number)
         {
             string[] _ammount = number.Split(',');
             string[] _dollars = _ammount[0].Split(' ');
 
             // convert dollar section
-            StringBuilder _result = ConvertCurrencyUnitToWords(_dollars, Currency.Dolar.ToString());
+            StringBuilder _result = ConvertCurrencyUnitToWords(_dollars, Currency.Dollar.ToString());
 
             // convert cent section
             if (_ammount.Length > 1)
@@ -36,17 +36,17 @@ namespace QoniacExercise.Service
 
             if (currency == Currency.Cent.ToString() && !Regex.IsMatch(string.Join("", amount), "^[0-9]{1,2}([,][0-9]{1,2})?$"))
             {
-                throw new BadIntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadIntry.InvalidRequestedCentsAmount, Predefined.DomainRules.NumericalToWord.DolarsMaxLimit));
+                throw new BadEntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadEntry.InvalidRequestedCentsAmount, Predefined.DomainRules.NumericalToWord.DollarsMaxLimit));
             }
 
             if (!int.TryParse(Regex.Replace(string.Join("", amount), @"t\s+", ""), out int _amountAsInteger))
             {
-                throw new BadIntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadIntry.IncorrectRequestFormat));
+                throw new BadEntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadEntry.IncorrectRequestFormat));
             }
 
-            if (currency == Currency.Dolar.ToString() && (_amountAsInteger <= 0  || _amountAsInteger >= Predefined.DomainRules.NumericalToWord.DolarsMaxLimit))
+            if (currency == Currency.Dollar.ToString() && (_amountAsInteger < 0  || _amountAsInteger >= Predefined.DomainRules.NumericalToWord.DollarsMaxLimit))
             {
-                throw new BadIntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadIntry.InvalidRequestedDollarsAmount, Predefined.DomainRules.NumericalToWord.DolarsMaxLimit));
+                throw new BadEntryException(string.Format(Predefined.Exceptions.NumericalToWord.BadEntry.InvalidRequestedDollarsAmount, Predefined.DomainRules.NumericalToWord.DollarsMaxLimit));
             }
 
             StringBuilder _result = new StringBuilder();
@@ -76,7 +76,7 @@ namespace QoniacExercise.Service
         {
             if (!Regex.IsMatch(block, "^[0-9]{1,3}([ ][0-9]{1,3})?$"))
             {
-                throw new BadIntryException(Predefined.Exceptions.NumericalToWord.BadIntry.InvalidNumberFormat);
+                throw new BadEntryException(Predefined.Exceptions.NumericalToWord.BadEntry.InvalidRequestedDollarNumberblocksCount);
             }
 
             StringBuilder _resultText = new StringBuilder();

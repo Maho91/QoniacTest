@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using QoniacExercise.Middlewares;
 
 namespace QoniacExercise
@@ -20,6 +21,10 @@ namespace QoniacExercise
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(c => { 
+                c.EnableAnnotations(); 
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = Configuration["AppName"], Version = Configuration["AppVersion"] });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +33,8 @@ namespace QoniacExercise
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
@@ -36,6 +43,7 @@ namespace QoniacExercise
 
             // global error handler
             app.UseMiddleware<ErrorHandlerMiddleware>();
+
 
             app.UseAuthorization();
 

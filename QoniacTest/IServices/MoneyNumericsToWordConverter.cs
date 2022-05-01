@@ -1,7 +1,7 @@
 namespace QoniacExercise.IServices
 {
-    public interface IMoneyNumericsToWordConverter
+    public interface ICurrencyNumericsToWordConverter
     {
-        public string ConvertDollarsAndCentsNumberToText(string number);
+        public string Convert(string number);
     }
 }

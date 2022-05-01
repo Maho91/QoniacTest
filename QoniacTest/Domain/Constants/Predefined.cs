@@ -16,7 +16,7 @@
             /// </summary>
             public static class NumericalToWord
             {
-                public const int DolarsMaxLimit = 999999999;
+                public const int DollarsMaxLimit = 999999999;
                 public const int CentsLimit = 99;
             }
         }
@@ -35,12 +35,12 @@
                 /// <summary>
                 /// Predefined BadRequest Exception 
                 /// </summary>
-                public static class BadIntry
+                public static class BadEntry
                 {
                     public const string InvalidRequestedDollarsAmount = "Requested amount of dollars must be only numbers and between (0 - {0})";
                     public const string InvalidRequestedCentsAmount = "Requested amount of cents percentage must be between (0 -  {0})";
                     public const string IncorrectRequestFormat = "Incorrect format, the request must have no letters and be formatted like the following examples: (0) , (0,10), (10 111,10) or (1 210 177)";
-                    public const string InvalidNumberFormat = "Numric blocks of the ammount must have maximum 3 digits";
+                    public const string InvalidRequestedDollarNumberblocksCount = "Numric blocks of the dollar currency must have maximum 3 digits";
                 }
             }
         }

@@ -24,7 +24,7 @@ namespace WpfUI.Services
             }
             else
             {
-                var error = JsonConvert.DeserializeObject<ErrorModel>(await httpResponseMessage.Content.ReadAsStringAsync());
+                ErrorModel error = JsonConvert.DeserializeObject<ErrorModel>(await httpResponseMessage.Content.ReadAsStringAsync());
                 throw new Exception(error.Message);
             }
         }

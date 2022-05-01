@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QoniacExercise", "QoniacTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUI", "WpfUI\WpfUI.csproj", "{83E51F7B-546C-4DEE-B541-EA187E39A760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qoniac", "Qoniac\Qoniac.csproj", "{F6CDFE58-79BC-4F20-8511-89C4D7F91CEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{83E51F7B-546C-4DEE-B541-EA187E39A760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83E51F7B-546C-4DEE-B541-EA187E39A760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83E51F7B-546C-4DEE-B541-EA187E39A760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6CDFE58-79BC-4F20-8511-89C4D7F91CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6CDFE58-79BC-4F20-8511-89C4D7F91CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6CDFE58-79BC-4F20-8511-89C4D7F91CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6CDFE58-79BC-4F20-8511-89C4D7F91CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

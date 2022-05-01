@@ -26,8 +26,8 @@ namespace WpfUI.ViewModels
                 MoneyNumericsToWordConverterServices _numericsToWordConverterServices = new MoneyNumericsToWordConverterServices();
                 try
                 {
-                    NumericToWordConverterResponseModel ss = await _numericsToWordConverterServices.GetNumericToWord(numericToWord);
-                    Result = ss.Result;
+                    NumericToWordConverterResponseModel responseModel = await _numericsToWordConverterServices.GetNumericToWord(numericToWord);
+                    Result = responseModel.Result;
                     RaisePropertyChanged("Result");
                 }
                 catch (Exception exception)

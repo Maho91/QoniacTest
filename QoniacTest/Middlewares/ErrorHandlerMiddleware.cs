@@ -29,7 +29,7 @@ namespace QoniacExercise.Middlewares
 
                 switch (error)
                 {
-                    case BadIntryException e:
+                    case BadEntryException e:
                         // custom application error
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
