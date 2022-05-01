@@ -13,19 +13,21 @@ Assumptions and measurements have been taken before/while the implementation of 
 - WPF for the Frontend
 
 ## Architectural Decisions 
-###### Due to the simplicity of the task the below decision were taken:
-- Not to Apply Object Orenited Modeling to modulurize the project  
-- Not to use CQRS as the task is simple and to avoid over engineering . 
-- Not to use dependency injection for loosly coupling the services.
-
-
-###### other pro were taken:
 - Develop with consideration to have high cohesive services/objects..
 - use of MVVM architecture for frontend project.
 - Objects and Method creation respects the reusability and maintainability aspects of good software architecture. 
 - Decoupling the task logic into service and generalizing that service with an interface.
 - Develop Unit testing
 - Enable Swagger documentation
+
+###### Due to the simplicity of the task the below decision were taken:
+- Not to Apply Object Orenited Modeling to modulurize the project  
+- Not to use CQRS as the task is simple and to avoid over engineering . 
+- Not to use dependency injection for loosly coupling the services.
+
+
+###### pros were taken:
+
 
 
 ## Prerequisites
