@@ -26,8 +26,6 @@ Assumptions and measurements have been taken before/while the implementation of 
 - Not to use dependency injection for loosly coupling the services.
 
 
-###### pros were taken:
-
 
 
 ## Prerequisites
@@ -40,7 +38,7 @@ Assumptions and measurements have been taken before/while the implementation of 
 Clone the main project from the Github repository:
 
 ```sh
-$ git clone https://github.com/CardoAI/emporium_backend.git
+$ git clone https://github.com/Maho91/QoniacTest.git
 ```
 Open the SLN file and configure your solution tun multipe project at once then run
 
