@@ -1,5 +1,5 @@
 # Qoniac
-## Exercise: converts a currency (dollars) from numbers into words 
+## Exercise: Convert a currency (dollars) from numbers into words 
 
 Assumptions and measurements have been taken before/while the implementation of the task:
 
@@ -20,13 +20,11 @@ Assumptions and measurements have been taken before/while the implementation of 
 - Develop Unit testing
 - Enable Swagger documentation
 
-###### Due to the simplicity of the task the below decision were taken:
-- Not to Apply Object Orenited Modeling to modulurize the project  
-- Not to use CQRS as the task is simple and to avoid over engineering . 
+###### Due to the simplicity of the task, the below decisions were taken:
+- Not to apply Object Orenited Modeling to modulurize the project  
+- Not to use Clean Architecture or CQRS design pattern as the task is simple and to avoid over-engineering. 
 - Not to use dependency injection for loosly coupling the services.
 
-
-###### pros were taken:
 
 
 
@@ -40,7 +38,7 @@ Assumptions and measurements have been taken before/while the implementation of 
 Clone the main project from the Github repository:
 
 ```sh
-$ git clone https://github.com/CardoAI/emporium_backend.git
+$ git clone https://github.com/Maho91/QoniacTest.git
 ```
 Open the SLN file and configure your solution tun multipe project at once then run
 
