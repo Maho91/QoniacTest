@@ -33,26 +33,26 @@ namespace Qoniac
         {
             foreach (string item in InValidFormatCurrencyNumericsToWordDictitoary.List)
             {
-                Assert.Throws<BadEntryException>(() => _currencyNumericsToWordConverter.Convert(item), BadEntry.IncorrectRequestFormat);
+                Assert.Throws<BadRequestException>(() => _currencyNumericsToWordConverter.Convert(item), BadEntry.IncorrectRequestFormat);
             }
         }
 
         [Test]
         public void TestInvalidRequestedDollarsAmount()
         {
-            Assert.Throws<BadEntryException>(() => _currencyNumericsToWordConverter.Convert("1 000 000 000"), BadEntry.InvalidRequestedDollarsAmount);
+            Assert.Throws<BadRequestException>(() => _currencyNumericsToWordConverter.Convert("1 000 000 000"), BadEntry.InvalidRequestedDollarsAmount);
         }
 
         [Test]
         public void TestInvalidRequestedCentAmountBetweenOneAndNinetyNine()
         {
-            Assert.Throws<BadEntryException>(() => _currencyNumericsToWordConverter.Convert("1,111"), BadEntry.InvalidRequestedCentsAmount);
+            Assert.Throws<BadRequestException>(() => _currencyNumericsToWordConverter.Convert("1,111"), BadEntry.InvalidRequestedCentsAmount);
         }
 
         [Test]
         public void TestInvalidRequestedDollarNumberblocksCount()
         {
-            Assert.Throws<BadEntryException>(() => _currencyNumericsToWordConverter.Convert("1111 1,1"), BadEntry.InvalidRequestedDollarNumberblocksCount);
+            Assert.Throws<BadRequestException>(() => _currencyNumericsToWordConverter.Convert("1111 1,1"), BadEntry.InvalidRequestedDollarNumberblocksCount);
         }
 
     }

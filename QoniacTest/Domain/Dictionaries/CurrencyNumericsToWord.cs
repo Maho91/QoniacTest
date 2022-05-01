@@ -5,7 +5,7 @@ namespace QoniacExercise.Domain.Dictionaries
     /// <summary>
     /// Dictionary of Numeric Representation in Words
     /// </summary>
-    public class NumericalToWord
+    public class CurrencyNumericsToWord
     {
         public static Dictionary<int, string> Dict => new Dictionary<int, string>
             {
