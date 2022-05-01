@@ -1,5 +1,5 @@
 # Qoniac
-## Exercise: converts a currency (dollars) from numbers into words 
+## Exercise: Convert a currency (dollars) from numbers into words 
 
 Assumptions and measurements have been taken before/while the implementation of the task:
 
