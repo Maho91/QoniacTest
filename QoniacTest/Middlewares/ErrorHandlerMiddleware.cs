@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using WebApi.Helpers;
 
-namespace QoniacTest.Middlewares
+namespace QoniacExercise.Middlewares
 {
     public class ErrorHandlerMiddleware
     {

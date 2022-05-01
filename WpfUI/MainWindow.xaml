@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
         mc:Ignorable="d"
-        Title="NumericToWordsConveter" Height="250" Width="500">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
@@ -21,6 +21,10 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,0,0,0" Text="Convert  Numeric Money Value to Words" />
         <TextBox x:Name="Amount" Grid.Row="1" Grid.Column="1" MinWidth="200"></TextBox>
-        <Button x:Name="Convert" Grid.Row="2" Margin="0,10,0,0" Grid.Column="1" Content="Convert" MaxHeight="30" VerticalAlignment="Top" Click="Convert_Click"/>
+        <Button x:Name="Convert" Grid.Row="1" Grid.Column="2" Margin="5" Content="Convert" MaxHeight="30" VerticalAlignment="Top" Foreground="White" Background="Blue" Click="Convert_Click"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="10,0,0,0" Text="Result" Foreground="Blue" />
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="10,0,0,0" Foreground="Blue" />
+
     </Grid>
+
 </Window>

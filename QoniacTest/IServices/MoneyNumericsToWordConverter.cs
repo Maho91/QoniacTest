@@ -1,4 +1,4 @@
-namespace QoniacTest.IServices
+namespace QoniacExercise.IServices
 {
     public interface IMoneyNumericsToWordConverter
     {

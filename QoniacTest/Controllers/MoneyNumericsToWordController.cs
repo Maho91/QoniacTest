@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using QoniacTest.IServices;
-using QoniacTest.Service;
+using QoniacExercise.IServices;
+using QoniacExercise.Service;
 using System.Text.Json;
 
-namespace QoniacTest.Controllers
+namespace QoniacExercise.Controllers
 {
     [ApiController]
     [Route("api/convert-money-numerics-to-words")]

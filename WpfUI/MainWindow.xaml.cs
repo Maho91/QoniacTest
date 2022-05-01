@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfUI.Services;
 
 namespace WpfUI
 {
@@ -20,16 +9,25 @@ namespace WpfUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Convert_Click(object sender, RoutedEventArgs e)
+        private async void Convert_Click(object sender, RoutedEventArgs e)
         {
-            var valuje =  Amount.Text;
 
-            Console.WriteLine(valuje);
+            MoneyNumericsToWordConverterServices _numericsToWordConverterServices = new MoneyNumericsToWordConverterServices();
+            try
+            {
+                Models.NumericToWordConverterResponseModel ss = await _numericsToWordConverterServices.GetNumericToWord(Amount.Text);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "QoniacTest": {
+    "QoniacExercise": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/convert-money-numerics-to-words",

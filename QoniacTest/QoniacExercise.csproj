@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>88ba8f79-64e8-4d65-83f5-ba44592e0c6b</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <AssemblyName>QoniacExercise</AssemblyName>
+    <RootNamespace>QoniacExercise</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

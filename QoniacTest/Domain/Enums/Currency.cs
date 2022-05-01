@@ -1,4 +1,4 @@
-namespace QoniacTest.Domain.Enums
+namespace QoniacExercise.Domain.Enums
 {
     public enum Currency
     {

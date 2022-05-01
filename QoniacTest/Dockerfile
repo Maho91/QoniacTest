@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["QoniacTest/QoniacTest.csproj", "QoniacTest/"]
-RUN dotnet restore "QoniacTest/QoniacTest.csproj"
+COPY ["QoniacExercise/QoniacExercise.csproj", "QoniacExercise/"]
+RUN dotnet restore "QoniacExercise/QoniacExercise.csproj"
 COPY . .
-WORKDIR "/src/QoniacTest"
-RUN dotnet build "QoniacTest.csproj" -c Release -o /app/build
+WORKDIR "/src/QoniacExercise"
+RUN dotnet build "QoniacExercise.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "QoniacTest.csproj" -c Release -o /app/publish
+RUN dotnet publish "QoniacExercise.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "QoniacTest.dll"]
+ENTRYPOINT ["dotnet", "QoniacExercise.dll"]

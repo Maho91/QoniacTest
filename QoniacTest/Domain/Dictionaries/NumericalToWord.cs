@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace QoniacTest.Domain.Dictionaries
+namespace QoniacExercise.Domain.Dictionaries
 {
     /// <summary>
     /// Dictionary of Numeric Representation in Words

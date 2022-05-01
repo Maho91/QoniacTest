@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using QoniacTest.Middleware;
+using QoniacExercise.Middlewares;
 
-namespace QoniacTest
+namespace QoniacExercise
 {
     public class Startup
     {
