@@ -20,9 +20,9 @@ Assumptions and measurements have been taken before/while the implementation of 
 - Develop Unit testing
 - Enable Swagger documentation
 
-###### Due to the simplicity of the task the below decision were taken:
-- Not to Apply Object Orenited Modeling to modulurize the project  
-- Not to use CQRS as the task is simple and to avoid over engineering . 
+###### Due to the simplicity of the task, the below decisions were taken:
+- Not to apply Object Orenited Modeling to modulurize the project  
+- Not to use Clean Architecture or CQRS design pattern as the task is simple and to avoid over-engineering. 
 - Not to use dependency injection for loosly coupling the services.
 
 
